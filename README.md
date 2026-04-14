@@ -2,7 +2,8 @@
 A new method for solving complex matrices developed by Ilir Ujkani.
 # The Ujkani Formula
 
-<img width="1887" height="406" alt="Complex Matrix Formula" src="https://github.com/user-attachments/assets/6b750f6b-bd52-45ed-bcf1-ab01748ff695" />
+<img width="1434" height="359" alt="image" src="https://github.com/user-attachments/assets/fd4203d5-54ed-438b-b409-281ebbb83bb1" />
+
 
 ## Overview
 This repository presents the **Ujkani Formula**, a novel mathematical approach for solving complex matrices, developed by **Ilir Ujkani**, Electrical Engineer.
