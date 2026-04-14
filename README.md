@@ -13,7 +13,7 @@ Solving complex matrices $A \cdot X = B$ typically requires expanding the matrix
 ## The Solution: The Ujkani Formula
 The formula provides a direct path to the solution:
 
-=IFERROR(BYROW(TRANSPOSE(WRAPROWS(LET(mat, A2:J11, re, MAP(mat, LAMBDA(a, IMREAL(a))), im, MAP(mat, LAMBDA(a, IMAGINARY(a))), MMULT(MINVERSE(HSTACK(VSTACK(re, im), VSTACK(-im, re))), VSTACK(MAP(L2:L11, LAMBDA(a, IMREAL(a))), MAP(L2:L11, LAMBDA(a, IMAGINARY(a)))))), ROWS(A2:J11))), LAMBDA(a, COMPLEX(TAKE(a,, 1), TAKE(a,, -1)))), "Matrice pa zgjidhje, pra e singuluar")
+=IFERROR(BYROW(TRANSPOSE(WRAPROWS(LET(mat, A2:J11, re, MAP(mat, LAMBDA(a, IMREAL(a))), im, MAP(mat, LAMBDA(a, IMAGINARY(a))), MMULT(MINVERSE(HSTACK(VSTACK(re, im), VSTACK(-im, re))), VSTACK(MAP(L2:L11, LAMBDA(a, IMREAL(a))), MAP(L2:L11, LAMBDA(a, IMAGINARY(a)))))), ROWS(A2:J11))), LAMBDA(a, COMPLEX(TAKE(a,, 1), TAKE(a,, -1)))), "Singuluar Matrix")
 
 ## Key Benefits
 - **Direct Computation:** Avoids the need for massive block-matrix expansions.
