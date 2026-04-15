@@ -12,7 +12,8 @@ This repository presents the **Ujkani Formula**, a novel mathematical approach f
 Solving complex matrices $A \cdot X = B$ typically requires expanding the matrix into a real-block format, which doubles the dimensions and increases computational overhead.
 
 ## The Solution: The Ujkani Formula
-The formula provides a direct path to the solution:
+The formula provides a direct path to the solution.
+Below is formula for Excel 365:
 
 =LET(
    xmatr, A2:J11,
@@ -25,7 +26,7 @@ The formula provides a direct path to the solution:
            LAMBDA(a, COMPLEX(TAKE(a,, 1), TAKE(a,, -1)))), "Singuluar Matrix")
 )
 
-Below is formula for Google Sheets;
+Below is formula for Google Sheets:
 
 =ARRAYFORMULA(LET(
  xmat, A2:J11,
