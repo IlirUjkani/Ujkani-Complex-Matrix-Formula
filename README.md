@@ -2,8 +2,7 @@
 A new method for solving complex matrices developed by Ilir Ujkani.
 # The Ujkani Formula
 
-<img width="1433" height="574" alt="image" src="https://github.com/user-attachments/assets/2286aed1-fb88-4f79-901d-f6011cfd2f21" />
-
+<img width="1879" height="580" alt="image" src="https://github.com/user-attachments/assets/3678000a-81db-4e99-949d-a0975bdddfd1" />
 
 
 ## Overview
@@ -25,6 +24,21 @@ The formula provides a direct path to the solution:
           IFERROR(BYROW(TRANSPOSE(WRAPROWS(MMULT(minv, vst), ROWS(xmatr))),
            LAMBDA(a, COMPLEX(TAKE(a,, 1), TAKE(a,, -1)))), "Singuluar Matrix")
 )
+
+Below is formula for Google Sheets;
+
+=ARRAYFORMULA(LET(
+ xmat, A2:J11,
+const, L2:L11,
+  lar, LAMBDA(a, IMREAL(a)),
+  lai, LAMBDA(a, IMAGINARY(a)),
+  imr, MAP(xmat, lar),
+  img, MAP(xmat, lai),
+ minv, MINVERSE(VSTACK(HSTACK(imr, -img), HSTACK(img, imr))),
+  vst, VSTACK(MAP(const, lar), MAP(const, lai)),
+  wrc, WRAPCOLS(MMULT(minv, vst), ROWS(xmat)),
+       COMPLEX(CHOOSECOLS(wrc, 1), CHOOSECOLS(wrc, -1))
+))
 
 ## Key Benefits
 - **Direct Computation:** Avoids the need for massive block-matrix expansions.
