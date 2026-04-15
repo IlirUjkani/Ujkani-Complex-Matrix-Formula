@@ -2,7 +2,8 @@
 A new method for solving complex matrices developed by Ilir Ujkani.
 # The Ujkani Formula
 
-<img width="1434" height="359" alt="image" src="https://github.com/user-attachments/assets/fd4203d5-54ed-438b-b409-281ebbb83bb1" />
+<img width="1433" height="574" alt="image" src="https://github.com/user-attachments/assets/2286aed1-fb88-4f79-901d-f6011cfd2f21" />
+
 
 
 ## Overview
